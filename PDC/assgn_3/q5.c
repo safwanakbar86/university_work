@@ -31,8 +31,6 @@ int main()
         index_array[1] = c - 1;
         index_array[2] = i;
         quick_sort(index_array);
-        if (i == r / 2)
-          quick_sort(index_array);
         sum += matrix_addition(i);
     }
         
