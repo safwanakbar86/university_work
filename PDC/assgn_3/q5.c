@@ -21,8 +21,7 @@ int main()
     print_matrix();
     
     int sum = 0;
-    printf("Processors: %d\n", omp_get_num_procs());
-    printf("Threads: %d\n", omp_get_max_threads());
+    omp_set_dynamic(1);
     
     #pragma omp parallel for reduction(+:sum)
     for (int i = 0; i < r; i++)
