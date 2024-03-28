@@ -18,9 +18,7 @@ int main()
       
   int key = rand() % 10;
   int count = 0;
-  
-  printf("\n\nProcessors: %d\n", omp_get_num_procs());
-  printf("Threads: %d\n", omp_get_max_threads());
+  omp_set_dynamic(1);
   
   #pragma omp parallel for reduction(+:count)
   for (int i = 0; i < N; i++)
