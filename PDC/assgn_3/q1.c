@@ -21,9 +21,24 @@ int main(int argc, char* argv[])
     while (random_num % 2 == 0)
       random_num = rand() % 10;
     odd[i] = random_num;
-    prime[i] = false;
+    prime[i] = true;
     printf("%d   ", random_num);
   }
   
+  #pragma omp parallel for num_threads(N) schedule(dynamic, 1)
+  for (int i = 0; i < N; i++)
+  {
+    int square_root = odd[i] * odd[i];
+    for (int j = 3; j < square_root; j++)
+      if (odd[i] % j == 0 && odd[i] != j)
+        prime[i] = false;
+  }
+  
+  printf("\nPrime Odd Numbers:\n");
+  for (int i = 0; i < N; i++)
+    if (prime[i] == true)
+      printf("%d   ", odd[i]);
+  
+  printf("\n");
   return 0;
 }
