@@ -13,6 +13,8 @@ int main()
   long int win = 0;
   
   start_time = omp_get_wtime();
+
+  // TO BE PARALLELIZED
   for (int i = 0; i < SIZE; i++)
     for (int j = 0; j < SIZE; j++)
       for (int k = 0; k < SIZE; k++)
@@ -23,6 +25,8 @@ int main()
         if (key == (x+y+z))
           win=win+1;
       }
+  // TO BE PARALLELIZED
+  
   end_time = omp_get_wtime();
   printf("Total wins = %ld\n", win);
   double sequential_time = end_time - start_time;
