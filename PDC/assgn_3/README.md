@@ -12,8 +12,8 @@ The following programs are written in C using OpenMP.
 
 ## Count Total Wins
 
-1. Parallelize the piece of code using OpenMP with SIZE=1000
-2. Comment above and below the piece of code to be parallelized
+1. Parallelize a piece of code using OpenMP with SIZE=1000
+2. The code to be parallelized will be commented in the sequential section
 3. Report sequential and parallel execution time using 2, 3, and 4 threads along with the achieved speedup
 4. Identify private variables, shared variables, critical section(s), and need for reduction to avoid semantic inconsistencies
 
