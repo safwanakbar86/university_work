@@ -2,7 +2,7 @@
 
 The following programs are written in C using OpenMP.
 
-## Odd Number Factors
+## Prime Odd Numbers
 
 1. Test each odd number up to a specified limit for divisibility by all the factors from 3 to the square root of that number
 2. The program takes two main parameters from the command line
