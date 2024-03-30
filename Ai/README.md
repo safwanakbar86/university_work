@@ -8,4 +8,4 @@ This directory includes assignments for Artificial Intelligence (Ai)
    * Uniform Cost Search (UCS)
    * Iterative Deepening Search (IDS)
 
-2. Solving [Chomp](https://github.com/safwanakbar86/uni_ai_work/blob/main/Ai_Assignment_2.jpg) using the Minimax algorithm
+2. Solving [Chomp](https://github.com/safwanakbar86/university_work/blob/main/Ai/assgn_2.jpg) using the Minimax algorithm
