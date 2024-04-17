@@ -8,4 +8,4 @@ Perform one-to-all broadcast on a hypercube with process zero as a source node.
 
 ## Question 2
 
-Perform one-to-all broadcast on linear ring without any restriction on the source node.
+Perform one-to-all broadcast on a linear ring without any source node restrictions.
