@@ -9,3 +9,8 @@ This directory includes assignments for Artificial Intelligence (Ai)
    * Iterative Deepening Search (IDS)
 
 2. Solving [Chomp](https://github.com/safwanakbar86/university_work/blob/main/Ai/assgn_2.jpg) using the Minimax algorithm
+
+3. Implementing Back Propagation for training neural networks:
+   * Building a multi-layer perceptron
+   * Adding a single hidden layer
+   * No built-in libraries
