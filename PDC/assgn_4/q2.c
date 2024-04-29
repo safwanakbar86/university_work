@@ -3,13 +3,13 @@
 
 void one_to_all_broadcast(int steps, int node, int srcnode)
 {
-    int virtual = node ^ srcnode;
+	int virtual = node ^ srcnode;
 	int mask = (int)(pow(2, steps) - 1);
 	
 	for (int i = steps - 1; i >= 0; i--)
 	{
 		mask = mask ^ (int)pow(2, i);
-
+	
 		if ((virtual & mask) == 0)
 		{
 			if ((virtual & (int)pow(2, i)) == 0)
@@ -17,7 +17,7 @@ void one_to_all_broadcast(int steps, int node, int srcnode)
 				int dst = virtual ^ (int)pow(2, i);
 				printf("Node %d sends message to destination node %d in step %d\n", node, (dst ^ srcnode), steps - i);
 			}
-
+	
 			else
 			{
 				int src = virtual ^ (int)pow(2, i);
