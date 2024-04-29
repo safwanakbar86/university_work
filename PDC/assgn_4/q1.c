@@ -21,7 +21,7 @@ void one_to_all_broadcast(int dimension, int ID)
 			{
 				int src = ID ^ (int)pow(2, i);
 				// receive message from src
-				printf("Node %d receives message from destination node %d in step %d\n", ID, src, dimension - i);
+				printf("Node %d receives message from source node %d in step %d\n", ID, src, dimension - i);
 			}
 		}
 	}
@@ -29,10 +29,14 @@ void one_to_all_broadcast(int dimension, int ID)
 
 int main()
 {
-	for (int j = 0; j < 8; j++)
+        int dimension = 3;
+        int nodes = (int)pow(2, dimension);
+        
+	for (int j = 0; j < nodes; j++)
 	{
-		one_to_all_broadcast(3, j);
+		one_to_all_broadcast(dimension, j);
 	        printf("\n");	
 	}
+	
 	return 0;
 }
