@@ -1,33 +1,38 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 
-int main()
+void one_to_all_broadcast(int dimension, int ID)
 {
-	int dimension = 2;
-	int source = 0;
-	int message;
-
-	int mask = pow(2, dimension) - 1;
+	int mask = (int)(pow(2, dimension) - 1);
 	for (int i = dimension - 1; i >= 0; i--)
 	{
-		mask = mask XOR pow(2, i);
+		mask = mask ^ (int)pow(2, i);
 
-		if (source AND mask = 0)
+		if ((ID & mask) == 0)
 		{
-			if (source AND 2^i = 0)
+			if ((ID & (int)pow(2, i)) == 0)
 			{
-				dest = source XOR 2^i
-				send message to dest
+				int dest = ID ^ (int)pow(2, i);
+				// send message to dest
+				printf("Node %d sends message to destination node %d in step %d\n", ID, dest, dimension - i);
 			}
 
 			else
 			{
-				src = source XOR 2^i
-				get message from src
+				int src = ID ^ (int)pow(2, i);
+				// receive message from src
+				printf("Node %d receives message from destination node %d in step %d\n", ID, src, dimension - i);
 			}
 		}
 	}
+}
 
+int main()
+{
+	for (int j = 0; j < 8; j++)
+	{
+		one_to_all_broadcast(3, j);
+	        printf("\n");	
+	}
 	return 0;
 }
