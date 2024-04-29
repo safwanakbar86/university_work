@@ -12,8 +12,8 @@ void one_to_all_broadcast(int dimension, int node)
 		{
 			if ((node & (int)pow(2, i)) == 0)
 			{
-				int des = node ^ (int)pow(2, i);
-				printf("Node %d sends message to destination node %d in step %d\n", node, des, dimension - i);
+				int dst = node ^ (int)pow(2, i);
+				printf("Node %d sends message to destination node %d in step %d\n", node, dst, dimension - i);
 			}
 
 			else
